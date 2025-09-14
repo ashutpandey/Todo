@@ -1,0 +1,309 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Passions+Conflict&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap');
+
+
+/* Global box-sizing for a better layout model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a base font and color for the entire application */
+body {
+  font-family: 'Playfair Display', system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(75deg, #808080 ,#3fada8 ); 
+  color: #333;
+}
+
+.container {
+  background: linear-gradient(135deg,#fceabb 0%, #f8b500 100%); /* Soft gradient background */;
+  margin:80px;
+  padding:  40px 30px;
+  border-radius: 15px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  animation: fadeIn 0.8s ease-out; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50; 
+  margin-bottom: 35px;
+  font-size: 2.8em; /* Slightly larger heading */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.todo-input, .todo-date-input, .todo-priority-input {
+  flex-grow: 1;
+  padding: 14px 12px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 1.05em;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus, .todo-date-input:focus, .todo-priority-input:focus {
+  outline: none;
+  border-color: #abf326; 
+}
+
+.todo-add-button {
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d); /* Gradient button */
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-add-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #fc5c7d, #6a82fb); /* Reverse gradient on hover */
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px; 
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for items */
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.todo-item.completed {
+  background: #f8faff; 
+  border-left: 6px solid #2ecc71; 
+  opacity: 0.8;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.todo-details input[type="checkbox"] {
+  width: 24px; 
+  height: 24px;
+  cursor: pointer;
+  accent-color: #6a82fb; 
+  min-width: 24px; 
+}
+
+.todo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-text {
+  font-size: 1.15em; 
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+}
+
+.todo-due-date {
+  font-size: 0.88em;
+  color: #7f8c8d; 
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+/* Actions (Edit/Delete Buttons) */
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 15px; /* Space from text */
+}
+
+.edit-button, .delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; 
+  font-size: 1.1em;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button {
+  color: #3498db;
+}
+
+.edit-button:hover {
+  background-color: #eaf6fd;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #fdeaea;
+  transform: translateY(-1px);
+}
+
+.edit-form {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.edit-input, .edit-date-input, .edit-priority-input {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.save-button {
+  background-color: #28a745; /* Green for save */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease
+}
+
+.save-button:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.navbar {
+  background-color: #90b9e9;
+  color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.navbar p {
+  font-size: 1rem;
+}
+
+.task-counter {
+  display: flex;
+  justify-content: space-around;
+  margin:15px;
+  padding:10px;
+  border-radius:8px;
+  background:#f1f1f1;
+  font-weight: bold;
+}
+
+.task-counter p {
+  margin:0;
+}
+
+/* New styles for filters and priority */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filter-container label {
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-container select,
+.todo-priority-input,
+.edit-priority-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.todo-item.priority-high {
+  border-left: 6px solid #e74c3c;
+}
+
+.todo-item.priority-medium {
+  border-left: 6px solid #f39c12;
+}
+
+.todo-item.priority-low {
+  border-left: 6px solid #2ecc71;
+}
+
+.todo-item.completed.priority-high,
+.todo-item.completed.priority-medium,
+.todo-item.completed.priority-low {
+  border-left-color: #2ecc71;
+}

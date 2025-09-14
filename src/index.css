@@ -1,0 +1,23 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Passions+Conflict&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Story+Script&display=swap');
+
+
+/* Global box-sizing for a better layout model */
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+/* Set a base font and color for the entire application */
+body {
+ font-family: 'Playfair Display', system-ui;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ background-color: #f0f2f5;
+ color: #333;
+}
+
+code {
+ font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
