@@ -80,13 +80,7 @@ Open the app in your browser 👉 http://localhost:3000
 
 📸 Screenshots
 
-(Replace with your own screenshots later)
 
-Welcome Page – Intro with "Get Started" button.
-
-Todo Page – Task list with filters, counters, and CRUD actions.
-
-About & Contact Pages – Static info pages.
 
 
 ## 📸 Screenshots
