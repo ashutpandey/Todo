@@ -88,6 +88,10 @@ Todo Page – Task list with filters, counters, and CRUD actions.
 
 About & Contact Pages – Static info pages.
 
+
+## 📸 Screenshots
+<img width="1898" height="873" alt="image" src="https://github.com/user-attachments/assets/abe20eb4-f2ff-4ffd-8804-082b818450ef" />
+
 📚 Learning Objectives
 
 This project demonstrates:
